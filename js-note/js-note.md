@@ -20,9 +20,9 @@
 
 ![1](pic/2.png)
 
-### node类型
+### 14.1 node类型
 
-#### 14.1.nodeType
+#### 14.1.1 nodeType
 
  + Node.ELEMENT_NODE（1）
  + Node.ATTRIBUTE_NODE（2）
@@ -46,7 +46,7 @@
     这个例子比较了someNode.nodeType与Node.ELEMENT_NODE常量。如果两者相等，则意味着
 someNode 是一个元素节点。  
  
-#### 14.2 nodeName / nodeValue
+#### 14.1.2 nodeName / nodeValue
    
    每一个节点又都有两个属性
    someNode.nodeName //元素的标签名字（比如p，span，body，head）
@@ -71,11 +71,11 @@ someNode 是一个元素节点。
     则会分别打印
     1 ， DIV ， null ， 此节点的所有属性
 
-#### 14.3 节点关系
+#### 14.1.3 节点关系
    
    ![3](pic/3.png)
 
-#### 14.4 节点操作
+#### 14.1.4 节点操作
    
    1.比较常用的是appendChild()  
    + 需要注意的是，添加节点之后返回的节点，就是添加的节点  
@@ -99,15 +99,30 @@ someNode 是一个元素节点。
    + 一个参数，需要注意的是返回的节点就是被移除的节点    
 
    6.cloneNode()
-   + 传入false或者true
+   + 传入false或者true,深浅拷贝
    
+### 14.2 document类型
+   
+   它的属性：  
+   nodeTyple 9
+   nodeName "#document"
+   nodeValue null
 
+   1.获取html这个最外层的节点的方式：   
+   + let html = document.documentElement;   
+   + alert(html === document.childNodes[0]);  true  
+   + alert(html === document.firstChild);   true 
+
+   2.document.body 直接指向body   
 
 
 
 
 # JS 操作
-
     document.querySelector("")  获取整个节点
 
+
+疑问：深浅拷贝的区别
+
+markdown格式debug
 
