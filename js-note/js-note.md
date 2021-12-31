@@ -105,15 +105,34 @@ someNode 是一个元素节点。
    
    它的属性：  
    nodeTyple 9
-   nodeName "#document"
-   nodeValue null
+   nodeName 值为"#document"
+   nodeValue 值为null
+   parentNode 值为 null； 
+   ownerDocument 值为 null；  
 
-   1.获取html这个最外层的节点的方式：   
-   + let html = document.documentElement;   
-   + alert(html === document.childNodes[0]);  true  
-   + alert(html === document.firstChild);   true 
+   1.获取html这个最外层的节点的方式：    
+   + let html = document.documentElement;     
+   + alert(html === document.childNodes[0]);  true    
+   + alert(html === document.firstChild);   true   
 
-   2.document.body 直接指向body   
+   2.document.body     //直接指向body    
+     document.title    //指向文档的title  
+     document.URL  
+     document.domain   //获取www.baidu.com/123/abc 中的www.baidu.com
+     document.referrer  
+
+   3.getElementById("")  //没找到返回null  
+     getElementByTag("") // 比如传入img  div  
+     getElementByName("")   
+
+### 14.3 Element类型  
+   
+   nodeType 等于 1；    
+   nodeName 值为元素的标签名；  
+   nodeValue 值为 null；  
+   parentNode 值为 Document 或 Element 对象；  
+
+
 
 
 
@@ -125,4 +144,8 @@ someNode 是一个元素节点。
 疑问：深浅拷贝的区别
 
 markdown格式debug
+
+element 和 node 的区别
+比如一个div 他就是一个node 
+但是也是一个element？
 
