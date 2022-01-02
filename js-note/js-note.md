@@ -171,10 +171,41 @@ var a = document.querySelector(".container1");
 
 ### 15.2 CSS 扩展  
 
-   getElementsByClassName();   
-   比如：  
-   document.getElementsByClassName("username current") //取所有类名中包含username和current的元素
-   document.getElementById("myDIv").getElementsByClassName("selected"); //取id为myDiv的元素子树中所有包含selected类的元素
+   + getElementsByClassName();   
+     比如：  
+     document.getElementsByClassName("username current") //取所有类名中包含username和current的元素
+     document.getElementById("myDIv").getElementsByClassName("selected"); //取id为myDiv的元素子树中所有包含selected类的元素
+
+   + classList
+     classList.add()
+     classList.remove()
+     classList.toggle(value)     //如果类名列表有value，则删除，如果不存在，则添加
+     classList.contains()
+
+   + readyState
+     document.readyState =="complete" 文档加载完成
+     document.readyState =="loading" 文档加载正在进行
+
+   + innerHTML 返回元素所有后代的html字符串
+               也会替换原来所包含的所有节点
+
+   + outerHTML 调用的话会调用完整的node树
+               写入的时候会完全取代原来的树
+
+   + insertAdjacentHTML()
+     insertAdfacentText()
+     都需要传入两个参数：  要插入标记的位置， 要插入的html或者文本
+
+       “beforebegin” 插入当前元素千遍，作为前一个同胞节点
+       “afterend“    插入当前元素后边，作为下一个同胞节点
+       “afterbegin”  插入当前元素内部，作为新节点或者第一个子节点千遍
+       “beforeend”   插入元素内部，作为新的子节点或者放在最后一个子节点后边
+
+   + innerText  获取返回所有的text的字符串
+                在设置和写入的时候会移除之前所有的后代节点，完全改变dom树
+     outerText  只是作用范围不同，outer包含了调用它的节点。
+
+## Chapter 17 事件
 
 
 
