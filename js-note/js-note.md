@@ -155,17 +155,17 @@ var a = document.querySelector(".container1");
    nodeType 3;   
    nodeName  "text"    
    nodeValue  为节点中包含的文本。  
-   parentNode 为element对象     
+   parentNode 为element对象      
    不支持子节点  
 
 
-## Chapter 15 DOM 扩展  
+## Chapter 15 DOM 扩展   
 
-### 15.1 selectors API
+### 15.1 selectors API  
    
-+ querySlector()  
-+ querySlectorAll()  
-   //id 为 #  
++ querySlector()   
++ querySlectorAll()   
+   //id 为 #   
    //class 为 .  
    //标签没有前缀  
 
@@ -173,40 +173,87 @@ var a = document.querySelector(".container1");
 
    + getElementsByClassName();   
      比如：  
-     document.getElementsByClassName("username current") //取所有类名中包含username和current的元素
-     document.getElementById("myDIv").getElementsByClassName("selected"); //取id为myDiv的元素子树中所有包含selected类的元素
+     document.getElementsByClassName("username current")   //取所有类名中包含username和current的元素  
+     document.getElementById("myDIv").getElementsByClassName("selected");   //取id为myDiv的元素子树中所有包含selected类的元素  
 
-   + classList
-     classList.add()
-     classList.remove()
-     classList.toggle(value)     //如果类名列表有value，则删除，如果不存在，则添加
-     classList.contains()
+   + classList  
+     classList.add()  
+     classList.remove()  
+     classList.toggle(value)     //如果类名列表有value，则删除，如果不存在，则添加  
+     classList.contains()  
 
    + readyState
-     document.readyState =="complete" 文档加载完成
-     document.readyState =="loading" 文档加载正在进行
+     document.readyState =="complete" 文档加载完成     
+     document.readyState =="loading" 文档加载正在进行    
 
-   + innerHTML 返回元素所有后代的html字符串
-               也会替换原来所包含的所有节点
+   + innerHTML 返回元素所有后代的html字符串   
+               也会替换原来所包含的所有节点   
 
-   + outerHTML 调用的话会调用完整的node树
-               写入的时候会完全取代原来的树
+   + outerHTML 调用的话会调用完整的node树   
+               写入的时候会完全取代原来的树   
 
-   + insertAdjacentHTML()
-     insertAdfacentText()
-     都需要传入两个参数：  要插入标记的位置， 要插入的html或者文本
+   + insertAdjacentHTML()   
+     insertAdfacentText()   
+     都需要传入两个参数：  要插入标记的位置， 要插入的html或者文本  
 
-       “beforebegin” 插入当前元素千遍，作为前一个同胞节点
-       “afterend“    插入当前元素后边，作为下一个同胞节点
-       “afterbegin”  插入当前元素内部，作为新节点或者第一个子节点千遍
-       “beforeend”   插入元素内部，作为新的子节点或者放在最后一个子节点后边
+       “beforebegin” 插入当前元素千遍，作为前一个同胞节点  
+       “afterend“    插入当前元素后边，作为下一个同胞节点  
+       “afterbegin”  插入当前元素内部，作为新节点或者第一个子节点千遍  
+       “beforeend”   插入元素内部，作为新的子节点或者放在最后一个子节点后边  
 
-   + innerText  获取返回所有的text的字符串
-                在设置和写入的时候会移除之前所有的后代节点，完全改变dom树
-     outerText  只是作用范围不同，outer包含了调用它的节点。
+   + innerText  获取返回所有的text的字符串  
+                在设置和写入的时候会移除之前所有的后代节点，完全改变dom树  
+     outerText  只是作用范围不同，outer包含了调用它的节点。  
 
-## Chapter 17 事件
+## Chapter 17 事件  
+
+   ```html
+   btn.onclick = function(){
+      console.log(this.id)
+   }
+   ```
+   多次写同样的点击事件会按照顺序执行  
+
+   + addEventListener()     
+   + removeEventListener()  
+      - click  
+      - mouseover  
+      - mouseout  
+ 
+   他们接受三个参数：事件名， 事件处理函数， 一个boolean  
+      - true 在捕获阶段调用    
+      - false 在冒泡阶段调用  
+   通过addEventListener()添加的事件只能通过removeEventListener来移除并且必须添加同样的参数。  
+   所以匿名函数无法移出。  
+
+   + attachEvent()  
+   + detachEvent()  
+      - onclick  
+
+   + stopPropogation()  
+
+   ```html
+   <body>
+        <ul class="container">containner
+            <li class="first">first</li>
+            <li>second</li>
+        </ul>
+        <script type="text/javascript">
+           let container = document.querySelector(".container")
+           let first = document.querySelector(".first")
+           first.addEventListener("click", function(event){
+            alert("哈哈哈哈");
+            // event.stopPropagation();
+           })
+           container.addEventListener("click", function(){
+            alert("呜呜呜呜");
+           })     
+        </script>
+   </body>  
+   ```
 
 
+
+   
 
 
