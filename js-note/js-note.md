@@ -155,21 +155,27 @@ var a = document.querySelector(".container1");
    nodeType 3;   
    nodeName  "text"    
    nodeValue  为节点中包含的文本。  
-   parentNode 为element对象    
-   不支持子节点
+   parentNode 为element对象     
+   不支持子节点  
+
+
+## Chapter 15 DOM 扩展  
+
+### 15.1 selectors API
+   
++ querySlector()  
++ querySlectorAll()  
+   //id 为 #  
+   //class 为 .  
+   //标签没有前缀  
+
+### 15.2 CSS 扩展  
+
+   getElementsByClassName();   
+   比如：  
+   document.getElementsByClassName("username current") //取所有类名中包含username和current的元素
+   document.getElementById("myDIv").getElementsByClassName("selected"); //取id为myDiv的元素子树中所有包含selected类的元素
 
 
 
-
-# JS 操作
-    document.querySelector("")  获取整个节点
-
-
-疑问：深浅拷贝的区别
-
-markdown格式debug，代码 tab？四个空格？ 反引号
-
-element 和 node 的区别
-比如一个div 他就是一个node 
-但是也是一个element？
 
