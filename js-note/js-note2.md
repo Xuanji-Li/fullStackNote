@@ -5,6 +5,9 @@
 ```html
 <body>
 	<script type="text/javascript">
+		btn.addEventLisenter("click", function abc(){
+			console.log(btn.tagName);
+		})
 		btn.addEventLisenter("click", function(){
 			console.log(btn.tagName);
 		})

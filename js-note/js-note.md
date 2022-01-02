@@ -206,13 +206,21 @@ var a = document.querySelector(".container1");
      outerText  只是作用范围不同，outer包含了调用它的节点。  
 
 ## Chapter 17 事件  
-
+   
+###   17.1 DOM事件对象
    ```html
    btn.onclick = function(){
       console.log(this.id)
    }
    ```
    多次写同样的点击事件会按照顺序执行  
+
+   **event对象是传给事件处理程序的唯一参数。**  
+   比如：  
+   first.addEventListener("click", function(event){  
+   alert("哈哈哈哈");  
+
+### 17.2 DOM事件对象
 
    + addEventListener()     
    + removeEventListener()  
@@ -226,11 +234,13 @@ var a = document.querySelector(".container1");
    通过addEventListener()添加的事件只能通过removeEventListener来移除并且必须添加同样的参数。  
    所以匿名函数无法移出。  
 
+### 17.3 IE事件对象
+
    + attachEvent()  
    + detachEvent()  
       - onclick  
 
-   + stopPropogation()  
+   + stopPropogation() 例子如下：     
 
    ```html
    <body>
@@ -251,9 +261,19 @@ var a = document.querySelector(".container1");
         </script>
    </body>  
    ```
+   以上事例展示了stop Propagation的功能，组织往父级元素传播
 
 
+### 17.4 事件类型
+
+   + 用户界面事件（UIEvent）：涉及与BOM交互的通用浏览器事件
+   + 焦点事件（FocusEvent）：在元素获得和失去焦点时触发
+   + 鼠标事件（MouseEvent）： 使用鼠标在页面上执行某些操作时触发
+   + 滚轮事件（WheelEvent）： 使用鼠标滚轮时候触发
+   + 输入事件（InputEvent）： 文档中输入文本时候触发
+   + 合成事件（CompositionEvent）： 在使用某种Input Method Editor 输入法编辑器输入字符时候触发
 
    
+
 
 
