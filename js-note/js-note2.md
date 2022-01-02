@@ -12,9 +12,9 @@
 			console.log(btn.tagName);
 		})
 
-		btn.addEventLisenter("click", (){
-			console.log(btn.tagName);
-		})
+		// btn.addEventLisenter("click", (){
+		// 	console.log(btn.tagName);
+		// })
 
 		btn.addEventLisenter("click", ()=>{
 			console.log(btn.tagName);
@@ -26,7 +26,7 @@
 
 ## 2
 
-function(){} //报错
+function (){} //报错
 (function(){}) //不报错
 function f(x) {return x+1} ()  //报错
 function f(x) {return x+1} (1) //不报错，为什么返回1 
@@ -35,3 +35,6 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
 
 箭头函数是什么
 为什么要用
+
+ +  1）箭头函数没有自己的this对象（详见下文）
+ + （3）不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替
