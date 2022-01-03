@@ -45,3 +45,11 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
 	npm init   
 	npm install --save-dev -parcel   
 	npx parcel index.html   
+
+## 5 
+   把自己电脑当作云服务器
+
+## 6 
+   项目完成之后需要打包什么
+   dist
+   module
