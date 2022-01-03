@@ -36,7 +36,7 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
 箭头函数是什么
 为什么要用
 
- +  1）箭头函数没有自己的this对象（详见下文）
+ +  1）箭头函数没有自己的this对象
  + （3）不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替
 
 ## 4
@@ -55,13 +55,28 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
     npm run dev	启动本地开发环境服务
     npm run build 打包
 
+
 ## 5 
-   把自己电脑当作云服务器
+
+	ES6  javascript 完整版详解
+
+[ES6](https://es6.ruanyifeng.com/#docs/promise)
 
 ## 6 
-   项目完成之后需要打包什么
-   dist
-   module
+	
+	js 的 同步任务 异步任务
+	      宏任务 微任务
+[详解](https://juejin.cn/post/6844903512845860872)
 
 ## 7 
-	个人网站+ 项目
+
+	promise 函数。 有点类似if else，去执行不同的方法。 把异步任务改为同步任务。async 改成awaite ，只有promise可以改
+
+	特殊的case：
+	setTimeout。        异步任务， 宏任务
+	promise 是微任务     异步任务       
+	
+
+
+	string -0 - number
+	
