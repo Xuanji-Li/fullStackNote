@@ -46,6 +46,15 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
 	npm install --save-dev -parcel   
 	npx parcel index.html   
 
+   ### dev & build
+	<script>
+	 "dev": "parcel   index.html --port 8080",
+    "build": "parcel build index.html",
+	</script>
+
+    npm run dev	启动本地开发环境服务
+    npm run build 打包
+
 ## 5 
    把自己电脑当作云服务器
 
@@ -53,3 +62,6 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
    项目完成之后需要打包什么
    dist
    module
+
+## 7 
+	个人网站+ 项目
