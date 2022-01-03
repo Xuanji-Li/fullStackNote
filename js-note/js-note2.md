@@ -40,8 +40,8 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
  + （3）不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替
 
 ## 4
-
-touch index.html
-npm init
-npm install --save-dev -parcel
-npx parcel index.html
+	
+	touch index.html   
+	npm init   
+	npm install --save-dev -parcel   
+	npx parcel index.html   
