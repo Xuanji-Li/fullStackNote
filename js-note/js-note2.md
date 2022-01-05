@@ -1,4 +1,4 @@
-# js note
+ 	# js note
 
 
 ## 1
@@ -83,7 +83,7 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
 	string转换数字直接-0  
 	
 ## 9 
-	常用的js方法 腐乳for循环等  
+	常用的js方法 对数组进行操作的方法，for循环等  
    ![](pic/4.jpeg)  
 
 ## js的按对象引用传值
@@ -119,7 +119,8 @@ function f(x) {return x+1} (1) //不报错，为什么返回1
         clickMiddle.onclick= function(){
             console.log('this is middle')
         }
-        clickInner.onclick=function(){
+        clickInner.onclick=function(event){
+            event.stopPropagation();
             console.log('this is inner');
         };
 </script>
