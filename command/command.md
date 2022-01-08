@@ -42,6 +42,6 @@ title: Command note
 
 ## bootstrap
 
-	nom install bootstrap --save
+	npm install bootstrap --save
 
 	import 'bootstrap/dist/css/bootstrap.min.css'
